@@ -1,10 +1,7 @@
 AOS.init({ startEvent: "load" });
 window.addEventListener("load", AOS.refresh);
 
-// go to top
-$(".btn-top").click(function () {
-  $("html, body").animate({ scrollTop: 0 }, 300);
-});
+
 
 // menu
 $(".header__menu").click(function () {
