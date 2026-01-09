@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="./public/icomoon/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/header-1.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__main">
+                <a href="./index.html" class="header__logo"><img src="./public/img/logo.svg" alt=""></a>
+                <nav class="header__nav">
+                    <ul>
+                        <li><a href="" class="active">關於追思雲</a></li>
+                        <li><a href="">最新公告</a></li>
+                        <li><a href="">線上追思</a></li>
+                        <li><a href="">個人故事館</a></li>
+                        <li><a href="">購買祭品/供品</a></li>
+                        <li><a href="">業者合作</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__func">
+                <a href="" class="header__btn">我要祭拜</a>
+                <div class="header__lang">
+                    <button class="header-lang-active">
+                        <i class="header-lang-active_globe bi bi-globe2"></i>
+                        <p>繁體中文</p>
+                        <i class="header-lang-active_arrow bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="header-lang-list">
+                        <li><a href="">简<span>体</span>中<span>文</span></a></li>
+                        <li><a href="">En<span>glish</span></a></li>
+                    </ul>
+                </div>
+                <button class="header__menu d-lg-none">
+                    <div class="bar bar-top"></div>
+                    <div class="bar bar-middle"></div>
+                    <div class="bar bar-bottom"></div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script>
+        document.querySelectorAll('.header-lang-active').forEach(function (element) {
+            element.addEventListener('click', function () {
+                const parent = this.closest('.header__lang');
+                if (parent) {
+                    parent.classList.toggle('active');
+                }
+            });
+        })
+    </script>
+</body>
+</html>
