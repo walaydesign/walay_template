@@ -480,157 +480,113 @@ ul {
   }
 }
 
-.card {
-  background-color: transparent;
-  border: 0;
+.cards {
+  padding: 80px 0 100px;
 }
 
-.card > .row {
-  margin-left: -15px;
-  margin-right: -15px;
+.cards .title {
+  color: #fff;
+  text-align: left;
+  padding-top: 30px;
 }
 
-.card > .row > div {
-  padding-left: 15px;
-  padding-right: 15px;
+.cards .row {
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
-.card-item {
-  margin-bottom: 50px;
+.cards .row > div {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.card_pic {
+.cards-item {
   position: relative;
   width: 100%;
-  padding-bottom: 70%;
-  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
+  padding-bottom: 100%;
+  z-index: 0;
+  margin-bottom: 60px;
 }
 
-.card_pic > img {
+.cards-item__wrapper {
   position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.cards-item__wrapper > img {
+  width: 200px;
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.cards-item__wrapper > h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cards-item::after {
+  position: absolute;
+  content: "";
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid #fff;
+  -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: -1;
   top: 0;
   left: 0;
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.card_pic .check-item {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-}
-
-.card_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 15px;
-  gap: 8px;
-}
-
-.card_title {
-  font-size: 20px;
-  font-weight: 900;
-  margin: 0;
-}
-
-.card_price {
-  color: #4099CB;
-  font-weight: 700;
-  margin: 0;
-  font-size: 20px;
-}
-
-.card_select {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #6EB6DF;
-  padding: 0 12px;
-  font-weight: 700;
-  color: #AEAEAE;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-image: url(../img/arrow-block.svg);
-  background-size: 40px;
-  background-position: right center;
-  background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 575px) {
-  .card_title, .card_price {
-    font-size: 16px;
-  }
-}
-
-.check-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-  padding: 6px 12px;
-  background-color: #00466E;
-  border-radius: 100px;
-  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.check-item_box {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  border: 1px solid #4099CB;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.check-item_box > img {
-  width: 80%;
-  opacity: 0;
-}
-
-.check-item_text {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.check-item.active {
-  background-color: #4099CB;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.check-item.active .check-item_text {
+.cards-item:hover .cards-item__wrapper h3 {
   color: #fff;
 }
 
-.check-item.active .check-item_box img {
-  opacity: 1;
+.cards-item:hover::after {
+  background-color: #00466E;
+}
+
+.cards-item.animation::after {
+  -webkit-transform: skewY(-15deg);
+          transform: skewY(-15deg);
+}
+
+@media screen and (max-width: 991px) {
+  .cards .title {
+    padding: 0 0 32px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cards .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  .cards .row > div {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .cards-item {
+    margin-bottom: 24px;
+  }
+  .cards-item__wrapper > img {
+    width: 80px;
+  }
+  .cards-item__wrapper > h3 {
+    font-size: 18px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
