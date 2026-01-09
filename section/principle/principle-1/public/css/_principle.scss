@@ -1,0 +1,50 @@
+.principle {
+    padding: 200px 0;
+    .row {
+        >div {
+            &:nth-child(2) {
+                margin-top: 140px;
+            }
+            &:nth-child(3) {
+                margin-top: 280px;
+            }
+        }
+    }
+    &-item {
+        margin-bottom: 64px;
+        >h3 {
+            font-size: 64px;
+            text-shadow: $shadow-text;
+            margin-bottom: 4px;
+        }
+        >h4 {
+            font-size: 22px;
+            margin: 0;
+            color: rgba(255,255,255,0.8);
+            text-shadow: $shadow-text;
+            font-weight: 500;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .row {
+        >div {
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+            &:nth-child(3) {
+                margin-top: 70px;
+            }
+        }
+    }
+        &-item {
+            margin-bottom: 32px;
+            >h3 {
+                font-size: 40px;
+                margin-bottom: 8px;
+            }
+            >h4 {
+                font-size: 16px;
+            }
+        }
+    }
+}
