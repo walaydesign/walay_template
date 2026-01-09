@@ -1,0 +1,14 @@
+.gallery {
+    &_item {
+        width: 25%;
+        padding: 2px;
+        >img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_item {
+            width: 33.3333%;
+        }
+    }
+}

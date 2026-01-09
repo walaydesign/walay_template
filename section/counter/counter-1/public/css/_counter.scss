@@ -1,0 +1,53 @@
+.counter {
+  padding: 200px 0;
+  .row {
+    > div {
+      &:nth-child(2) {
+        margin-top: 140px;
+      }
+      &:nth-child(3) {
+        margin-top: 280px;
+      }
+    }
+  }
+  &-item {
+    > h3 {
+      font-size: 160px;
+      text-shadow: $shadow-text;
+      margin-bottom: 4px;
+    }
+    > h4 {
+      font-size: 22px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: $shadow-text;
+      font-weight: 500;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .row {
+      margin-left: -20px;
+      margin-right: -20px;
+      > div {
+        padding-left: 20px;
+        padding-right: 20px;
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+        &:nth-child(3) {
+          margin-top: 70px;
+        }
+      }
+    }
+    &-item {
+      margin-bottom: 32px;
+      > h3 {
+        font-size: 80px;
+        margin-bottom: 8px;
+      }
+      > h4 {
+        font-size: 16px;
+      }
+    }
+  }
+}
