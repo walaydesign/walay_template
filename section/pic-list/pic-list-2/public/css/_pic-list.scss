@@ -1,0 +1,115 @@
+.pic-list {
+  padding: 120px 0 160px;
+  &-item {
+    &__pic {
+      width: 84%;
+      margin: 0 auto;
+      >img {
+        width: 100%;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      }
+    }
+    &__text {
+      padding: 100px 40px 40px;
+      border: 1px solid rgba(255,255,255,0.3);
+      margin-top: -72px;
+    }
+  }
+  &-title {
+    text-align: center;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    &__main {
+      color: $secondary-500;
+      font: $heading-2;
+      margin-bottom: 12px;
+    }
+    &__second {
+      margin: 0;
+      font: $body-3-M;
+    }
+  }
+  &-list {
+    padding-top: 32px;
+    &__title {
+      font: $body-2-M;
+      color: $primary-100;
+      margin-bottom: 24px;
+    }
+    ul {
+      li {
+        margin-bottom: 12px;
+        position: relative;
+        padding-left: 28px;
+        color: rgba(255,255,255,0.8);
+        font: $body-3;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 16px;
+          height: 16px;
+          background-image: url(../img/arrow.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 6px;
+          left: 0;
+        }
+      }
+    }
+  }
+  &__swiper {
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .swiper-pagination {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    &-bullet {
+      opacity: 1;
+      background-color: $primary-800;
+      &-active {
+        background-color: $secondary-500;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &-item {
+      &__text {
+        padding: 100px 20px 24px;
+      }
+    }
+    &-title {
+      padding-bottom: 20px;
+      &__main {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      &__second {
+        font-size: 16px;
+      }
+    }
+    &-list {
+      padding-top: 24px;
+      &__title {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+      ul {
+        li {
+          font-size: 16px;
+          padding-left: 20px;
+          &::before {
+            width: 12px;
+            height: 12px;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

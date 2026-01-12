@@ -1,0 +1,127 @@
+.product-detail {
+  padding: 140px 0 80px;
+  .row {
+    margin: 0;
+    > div {
+      padding: 0;
+    }
+  }
+  &__pic {
+    position: relative;
+    width: 100%;
+    padding-bottom: 80%;
+    z-index: 0;
+    > img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: calc(100% + 130px);
+      border: 4px solid $primary-800;
+      left: -65px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+  &__text {
+    padding-left: 60px;
+  }
+  &-back {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 60px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $white-15;
+      top: 50%;
+      left: 0;
+      z-index: -1;
+    }
+    &__link {
+      width: fit-content;
+      padding-left: 12px;
+      background-color: $primary-900;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-left: auto;
+      > p {
+        font: $kanit-4;
+        margin: 0;
+      }
+      > span {
+        font-size: 14px;
+      }
+      &:hover {
+        > span {
+          &::before {
+            color: $primary-500;
+          }
+        }
+      }
+    }
+  }
+  &__name {
+    font: $heading-1;
+    margin-bottom: 8px;
+  }
+  &__category {
+    font: $body-2;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 45px;
+      height: 4px;
+      background-color: $secondary-500;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &__intro {
+    font: $body-2;
+    margin-bottom: 60px;
+    text-align: justify;
+  }
+  @media screen and (max-width: 991px) {
+    &__text {
+      padding: 100px 0 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__pic {
+      &::after {
+        height: calc(100% + 80px);
+        border: 2px solid $primary-800;
+        left: -40px;
+      }
+    }
+    &__name {
+      font-size: 32px;
+    }
+    &__category {
+      font-size: 18px;
+    }
+    &__intro {
+      font-size: 16px;
+    }
+    &-back {
+      margin-bottom: 30px;
+    }
+  }
+}

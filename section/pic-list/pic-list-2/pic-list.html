@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="pic-list">
+        <div class="container">
+          <div class="swiper-container pic-list__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="pic-list-item">
+                    <div class="pic-list-item__pic">
+                        <img src="./public/img/prize.png" alt="">
+                    </div>
+                    <div class="pic-list-item__text">
+                        <div class="pic-list-title">
+                            <h3 class="pic-list-title__main">導入 ISO 9001</h3>
+                            <h4 class="pic-list-title__second">構建卓越品質管理系統</h4>
+                        </div>
+                        <div class="pic-list-list">
+                            <h5 class="pic-list-list__title">品質承諾</h5>
+                            <ul>
+                                <li>建立標準化制度，聚焦高成本效益流程</li>
+                                <li>強化企業既有技術、管理與文化</li>
+                                <li>資訊化文件有助知識資產保存與技術整合</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pic-list-item">
+                    <div class="pic-list-item__pic">
+                        <img src="./public/img/prize.png" alt="">
+                    </div>
+                    <div class="pic-list-item__text">
+                        <div class="pic-list-title">
+                            <h3 class="pic-list-title__main">導入 ISO 9001</h3>
+                            <h4 class="pic-list-title__second">構建卓越品質管理系統</h4>
+                        </div>
+                        <div class="pic-list-list">
+                            <h5 class="pic-list-list__title">品質承諾</h5>
+                            <ul>
+                                <li>建立標準化制度，聚焦高成本效益流程</li>
+                                <li>強化企業既有技術、管理與文化</li>
+                                <li>資訊化文件有助知識資產保存與技術整合</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="pic-list-item">
+                    <div class="pic-list-item__pic">
+                        <img src="./public/img/prize.png" alt="">
+                    </div>
+                    <div class="pic-list-item__text">
+                        <div class="pic-list-title">
+                            <h3 class="pic-list-title__main">導入 ISO 9001</h3>
+                            <h4 class="pic-list-title__second">構建卓越品質管理系統</h4>
+                        </div>
+                        <div class="pic-list-list">
+                            <h5 class="pic-list-list__title">品質承諾</h5>
+                            <ul>
+                                <li>建立標準化制度，聚焦高成本效益流程</li>
+                                <li>強化企業既有技術、管理與文化</li>
+                                <li>資訊化文件有助知識資產保存與技術整合</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".pic-list__swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        speed: 1000,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            }
+        }
+      });
+    </script>
+  </body>
+</html>

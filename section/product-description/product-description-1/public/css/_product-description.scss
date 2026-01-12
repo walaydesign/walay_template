@@ -1,0 +1,32 @@
+.product-description {
+  padding-bottom: 200px;
+  &__wrapper {
+    background-color: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-left: 3px solid $secondary-500;
+  }
+  &-title {
+    font: $heading-4;
+    color: $primary-300;
+    margin-bottom: 32px;
+  }
+  &-text {
+    color: $white;
+    font: $body-1;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    >* {
+      margin: 32px 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__wrapper {
+      padding: 24px;
+    }
+    &-text {
+      font-size: 18px;
+    }
+  }
+}
