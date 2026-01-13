@@ -1,0 +1,59 @@
+.contact {
+    padding: 120px 0 200px;
+    .container {
+        >.row {
+            margin-left: -36px;
+            margin-right: -36px;
+            align-items: center;
+            >div {
+                padding-left: 36px;
+                padding-right: 36px;
+            }
+        }
+    }
+    &-form {
+        &__title {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            font-size: 64px;
+            font-weight: 700;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 80px;
+                height: 4px;
+                background-color: $secondary-500;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        .row {
+            margin-left: -18px;
+            margin-right: -18px;
+            >div {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+        }
+        .input, .textarea {
+            margin-bottom: 28px;
+        }
+        .btn {
+            margin: 0 auto;
+        }
+    }
+    &-pic {
+        img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &-form {
+            padding-top: 40px;
+            &__title {
+                font-size: 52px;
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+.contact {
+    min-height: 800px;
+    background-image: url(../img/section_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    .container {
+        max-width: 950px;
+        padding: 0;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px 80px;
+        background-color: $primary-3;
+        gap: 16px;
+        height: 100%;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+    &__form {
+        textarea {
+            height: 150px !important;
+        }
+        button {
+            border: 1px solid $white;
+            margin: 12px auto 0;
+            width: 180px;
+            color: $white;
+            height: 48px;
+            transition: $transition;
+            &:hover {
+                background-color: $white;
+                color: $primary-1;
+            }
+        }
+    }
+    &__title {
+        color: $white;
+        font-size: 36px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-weight: 500;
+    }
+    &__text {
+        color: $white;
+        margin-bottom: 8px;
+        line-height: 1.9;
+    }
+    &__input {
+        margin-top: 12px;
+        border: 1px solid $white;
+        padding: 13px 16px;
+        color: $white;
+        height: 48px;
+        width: 100%;
+        &::placeholder {
+            color: $white;
+            opacity: 0.6;
+        }
+    }
+    &__info {
+        margin-top: 16px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-top: 4px;
+            display: flex;
+            gap: 12px;
+            color: $white;
+            i {
+                font-size: 20px;
+            }
+            p {
+                width: calc(100% - 20px - 12px);
+                line-height: 1.9;
+                margin: 0;
+                color: $white;
+                text-align: left;
+                a {
+                    color: $white;
+                    display: inline-block;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &__inner {
+            margin: 0 auto;
+            padding: 80px 24px;
+        }  
+        &__info {
+            li {
+                p {
+                    font-size: 15px;
+                }
+            }
+        } 
+    }
+}

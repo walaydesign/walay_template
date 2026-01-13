@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
@@ -22,11 +22,129 @@
   <body>
     <main>
       <div class="timeline">
-        
+        <div class="container">
+          <div class="timeline__wrapper">
+            <div class="timeline-content">
+              <div class="timeline-item">
+                <div class="timeline-item__wrapper">
+                  <p class="timeline-item__num">1</p>
+                  <div class="timeline-item__text">
+                    <h3 class="timeline-item__title">
+                      引進基礎建設設備<br />參與十大建設
+                    </h3>
+                    <p class="timeline-item__intro">
+                      1962年程欲明先生創辦「肇明」為十大建設供應優良設備
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__wrapper">
+                  <p class="timeline-item__num">2</p>
+                  <div class="timeline-item__text">
+                    <h3 class="timeline-item__title">引進PLC系統技術再精深</h3>
+                    <p class="timeline-item__intro">
+                      1976年育貿(UMIAK)與愈明(TRANS)先後成立。引進PLC系統
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__wrapper">
+                  <p class="timeline-item__num">3</p>
+                  <div class="timeline-item__text">
+                    <h3 class="timeline-item__title">
+                      高品質匯流排槽(BUSWAY)工程，奠立服務口碑
+                    </h3>
+                    <p class="timeline-item__intro">
+                      成功將富士電機(FUJI)產品帶入台灣電力配電市場，引進PMCS及各項PLC設備軟硬體
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__wrapper">
+                  <p class="timeline-item__num">4</p>
+                  <div class="timeline-item__text">
+                    <h3 class="timeline-item__title">自動化高端技術</h3>
+                    <p class="timeline-item__intro">
+                      IoT世代，觸控面板介面，電力工程涵蓋保護、通訊、監控、管理等高端技術
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__wrapper">
+                  <p class="timeline-item__num">5</p>
+                  <div class="timeline-item__text">
+                    <h3 class="timeline-item__title">工業4.0與AI智能</h3>
+                    <p class="timeline-item__intro">
+                      自動化技術跨界，進行大數據儲存、分析、管理、業雲端、工廠執行系(MES)等系統操作優化整合
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-item__wrapper">
+                  <p class="timeline-item__num">6</p>
+                  <div class="timeline-item__text bigger">
+                    <h3 class="timeline-item__title">
+                      優化整合能力，迎向科技未來
+                    </h3>
+                    <p class="timeline-item__intro">
+                      PLC自動化技術可跨界進行大數據儲存/分析/管理、工業雲端、工廠執行系統(MES)與移動作業方案等系統操作做優化與整合，並針對電力系統61850規約之智慧電網系統進行參與建置與投標
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const wrapper = document.querySelector(".timeline__wrapper");
+        const items = document.querySelectorAll(".timeline-item__text");
+
+        if (!wrapper || !items.length) return;
+
+        function updateTimelinePadding() {
+          if (window.innerWidth <= 1199) {
+            wrapper.style.paddingTop = "";
+            wrapper.style.paddingBottom = "";
+            return;
+          }
+
+          let maxHeightTop = 0;
+          let maxHeightBottom = 0;
+
+          items.forEach((item, index) => {
+            const styles = getComputedStyle(item);
+            const height =
+              item.offsetHeight +
+              parseInt(styles.paddingTop, 10) +
+              parseInt(styles.paddingBottom, 10);
+
+            if (index % 2 === 0) {
+              if (height > maxHeightBottom) maxHeightBottom = height;
+            } else {
+              if (height > maxHeightTop) maxHeightTop = height;
+            }
+          });
+
+          wrapper.style.paddingTop = maxHeightTop + 62 + "px";
+          wrapper.style.paddingBottom = maxHeightBottom + 62 + "px";
+        }
+
+        updateTimelinePadding();
+
+        window.addEventListener("resize", updateTimelinePadding);
+      });
+    </script>
   </body>
 </html>
