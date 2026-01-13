@@ -21,24 +21,23 @@
   </head>
   <body>
     <div class="counter">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="counter-item">
-                        <h3><span id="year">60</span>+</h3>
-                        <h4>年的電力專業傳承</h4>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-6">
-                    <div class="counter-item">
-                        <h3 id="building">10</h3>
-                        <h4>十大建設的要角</h4>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 col-6">
+            <div class="counter-item">
+              <h3><span id="year">60</span>+</h3>
+              <h4>年的電力專業傳承</h4>
             </div>
+          </div>
+          <div class="col-lg-4 col-6">
+            <div class="counter-item">
+              <h3 id="building">10</h3>
+              <h4>十大建設的要角</h4>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <script src="./public/js/jquery/jquery.min.js"></script>
@@ -46,22 +45,21 @@
     <script src="./public/js/count/noframework.waypoints.min.js"></script>
     <script src="./public/js/count/countUp.umd.js"></script>
     <script>
-        var options1={
-    smartEasingAmount:60,
-}
-var options2={
-    smartEasingAmount:10,
-}
-new Waypoint({
-    element: document.querySelector(".counter"),
-    handler: function () {
-        var numAnim1 = new countUp.CountUp('year', 60, options1);
-        numAnim1.start();
-        var numAnim2 = new countUp.CountUp('building', 10, options2);
-        numAnim2.start();
-    },
-    // offset: '80%',
-});
+      var options1 = {
+        smartEasingAmount: 60,
+      };
+      var options2 = {
+        smartEasingAmount: 10,
+      };
+      new Waypoint({
+        element: document.querySelector(".counter"),
+        handler: function () {
+          var numAnim1 = new countUp.CountUp("year", 60, options1);
+          numAnim1.start();
+          var numAnim2 = new countUp.CountUp("building", 10, options2);
+          numAnim2.start();
+        },
+      });
     </script>
   </body>
 </html>
