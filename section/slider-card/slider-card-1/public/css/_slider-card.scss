@@ -1,0 +1,120 @@
+.slider-card {
+  padding: 100px 0 calc((100vw - 1320px) / 2 + 20px) 100px;
+  display: flex;
+  flex-wrap: wrap;
+  &-text {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__en {
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+      font-size: 56px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 4px;
+        background-color: $secondary-500;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    &__ch {
+      font: $heading-3;
+    }
+  }
+  &-main {
+    width: calc(100% - 300px);
+    &__swiper {
+      overflow: hidden;
+    }
+  }
+  &-link {
+    display: block;
+    padding: 24px;
+    background-color: $primary-800;
+    border: 1px solid $primary-700;
+    &__title {
+      font: $heading-4;
+      margin-bottom: 16px;
+      transition: $transition;
+    }
+    &__category {
+      font: $body-3;
+      margin-bottom: 24px;
+      color: rgba(255,255,255,0.6);
+      transition: $transition;
+    }
+    &__pic {
+      box-shadow: $shadow-pic;
+      position: relative;
+      width: 100%;
+      padding-bottom: 75%;
+      >img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+      }
+    }
+    &:hover {
+      .slider-card-link {
+        &__title, &__category {
+          color: $secondary-500;
+        }
+      }
+    }
+  }
+  &-btns {
+    display: flex;
+    gap: 24px;
+    button {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $white;
+      span {
+        font-size: 24px;
+      }
+      &:hover {
+        background-color: $primary-500;
+        border-color: $primary-500
+      }
+    }
+  }
+  @media screen and (max-width: 1399px) {
+    padding-left: calc((100vw - 1140px) / 2 + 20px);
+  }
+  @media screen and (max-width: 1199px) {
+    padding-left: calc((100vw - 960px) / 2 + 20px);
+  }
+  @media screen and (max-width: 991px) {
+    padding-left: 20px;
+    &-text {
+      width: 100%;
+      margin-bottom: 80px;
+      &__en {
+        font-size: 40px;
+        br {
+          display: none;
+        }
+      }
+      &__ch {
+        font-size: 20px;
+      }
+    }
+    &-main {
+      width: 100%;
+    }
+    &-btns {
+      display: none;
+    }
+  }
+}

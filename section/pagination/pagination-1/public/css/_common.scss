@@ -4,6 +4,7 @@ $white: #fff;
 $white-15: rgba(255,255,255,0.15);
 $white-30: rgba(255,255,255,0.3);
 $red: #da0000;
+$text: $white;
 
 $primary-50: #F4FBFF;
 $primary-100: #DFF4FF;
@@ -39,7 +40,6 @@ $gray-700: #898989;
 $gray-800: #767676;
 $gray-900: #5F5F5F;
 $gray-950: #2C2C2C;
-$text: $white;
 
 
 $font-sans: "noto sans TC";
@@ -92,9 +92,9 @@ body {
   color: $text;
   font-family: "Kanit", "noto sans TC", sans-serif;
   line-height: 1.5;
+  background-color: $primary-900;
   font-size: 20px;
   height: 1000px;
-  background-color: $primary-900;
   @media screen and (max-width: 767px) {
     font-size: 16px;
   }
@@ -184,21 +184,21 @@ ul {
 }
 
 .btn {
-  border: 1px solid $primary-400;
-  padding: 8px 35px;
+  border: 1px solid $primary-700;
+  padding: 16px 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   border-radius: 0;
   &-text {
-    font-size: 16px;
-    font-weight: 700;
+    font: $body-2;
+    font-family: $font-sans;
     transition: $transition;
     margin: 0;
   }
   &-icon {
-    font-size: 16px;
+    font-size: 24px;
     &::before {
       transition: $transition;
     }
@@ -256,7 +256,7 @@ ul {
     }
   }
   &-fill {
-    background-color: $primary-400;
+    background-color: $primary-700;
     color: $white;
     font-weight: 700;
     width: fit-content;
@@ -272,9 +272,9 @@ ul {
       }
     }
     &:hover {
-      background-color: $primary-700;
+      background-color: $primary-500;
       color: $white;
-      border-color: $primary-700;
+      border-color: $primary-500;
     }
     &-light {
       padding: 8px 36px;
