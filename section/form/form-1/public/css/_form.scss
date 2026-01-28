@@ -1,0 +1,138 @@
+.form {
+  padding-bottom: 60px;
+  &__title {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    position: relative;
+    span {
+      display: block;
+      text-align: center;
+      width: 300px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc((100% - 300px) / 2);
+      border-top: 2px dashed #222;
+      top: calc(50% - 1px);
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+  &-item {
+    display: flex;
+    margin: 10px 0;
+    &__label {
+      display: flex;
+      width: 90px;
+      height: 52px;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    &__content {
+      width: calc(100% - 90px);
+      min-height: 52px;
+      display: flex;
+      flex-wrap: wrap;
+      select {
+        height: 52px;
+        border-radius: 100px;
+        background-color: $white;
+        padding: 10px 40px 10px 20px;
+        border: 2px solid $primary-500;
+      }
+    }
+  }
+  &-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    a {
+      border-radius: 100px;
+      border: 2px solid;
+      background-color: $white;
+      padding: 10px 25px;
+      color: #333;
+      font-weight: 500;
+      height: 52px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        color: $white;
+      }
+    }
+    &.theme {
+      &-secondary {
+        a {
+          border-color: $secondary-500;
+          &.active {
+            background-color: $secondary-500;
+          }
+        }
+      }
+      &-third {
+        a {
+          border-color: $third-500;
+          &.active {
+            background-color: $third-500;
+          }
+        }
+      }
+    }
+  }
+  &-submit {
+    display: flex;
+    width: fit-content;
+    padding: 8px 24px;
+    border-radius: 100px;
+    background-color: $third-600;
+    color: $white;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px auto;
+  }
+  @media screen and (max-width: 991px) {
+    &__title {
+      span {
+        width: 180px;
+      }
+      &::before,
+      &::after {
+        width: calc((100% - 180px) / 2);
+      }
+    }
+    &-item {
+      flex-direction: column;
+      gap: 5px;
+      &__label {
+        width: 100%;
+        height: auto;
+      }
+      &__content {
+        width: 100%;
+        select {
+          width: 100%;
+        }
+      }
+    }
+      &-btns {
+        width: 100%;
+        a {
+          width: calc((100% - 10px) / 2);
+        }
+      }
+  }
+}

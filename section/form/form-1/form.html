@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <form class="form">
+        <div class="container">
+          <h1 class="form__title"><span>活動報名</span></h1>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-item">
+                <label for="" class="form-item__label">行政區</label>
+                <div class="form-item__content">
+                  <select name="" id="">
+                    <option value="">請選擇</option>
+                    <option value="">佳里區</option>
+                    <option value="">仁德區</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-item">
+                <label for="" class="form-item__label">親子館</label>
+                <div class="form-item__content">
+                  <select name="" id="">
+                    <option value="">請選擇</option>
+                    <option value="">佳里區親子悠遊館</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-item">
+                <label for="" class="form-item__label">課程分類</label>
+                <div class="form-item__content">
+                  <div class="form-btns theme-third">
+                    <a class="all">所有活動</a>
+                    <a>親職講座</a>
+                    <a>社區宣導</a>
+                    <a>兒童篩檢</a>
+                    <a>親子活動</a>
+                    <a>自由探索</a>
+                    <a>其他活動</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="form-item">
+                <label for="" class="form-item__label">年齡</label>
+                <div class="form-item__content">
+                  <div class="form-btns theme-secondary">
+                    <a>0~未滿4歲</a>
+                    <a>4~未滿7歲</a>
+                    <a>7~未滿12歲</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="form-submit">查詢</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".form-btns a").click(function() {
+        if($(this).hasClass("all")) {
+          if($(this).hasClass("active")) {
+            $(this).parents(".form-btns").find("a").removeClass("active");
+          }else {
+            $(this).parents(".form-btns").find("a").addClass("active");
+          }
+        }else {
+          $(this).toggleClass("active");
+        }
+      })
+    </script>
+    
+  </body>
+</html>
