@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+$white: #fff;
+$white-15: rgba(255,255,255,0.15);
+$white-30: rgba(255,255,255,0.3);
+$red: #da0000;
+$text: $white;
+
+$primary-50: #F4FBFF;
+$primary-100: #DFF4FF;
+$primary-200: #CCEDFF;
+$primary-300: #A1D6F4;
+$primary-400: #6EB6DF;
+$primary-500: #4099CB;
+$primary-600: #0074B6;
+$primary-700: #005A8D;
+$primary-800: #00466E;
+$primary-900: #002F4A;
+
+
+$secondary-50: #FFFAED;
+$secondary-100: #FFF3D7;
+$secondary-200: #FFE7B1;
+$secondary-300: #FFD679;
+$secondary-400: #FFC53F;
+$secondary-500: #F6AB00;
+$secondary-600: #DB9800;
+$secondary-700: #B88000;
+$secondary-800: #936600;
+$secondary-900: #634500;
+
+$gray-50: #F9F9F9;
+$gray-100: #EEEEEE;
+$gray-200: #E2E2E2;
+$gray-300: #D0D0D0;
+$gray-400: #BDBDBD;
+$gray-500: #AEAEAE;
+$gray-600: #9D9D9D;
+$gray-700: #898989;
+$gray-800: #767676;
+$gray-900: #5F5F5F;
+$gray-950: #2C2C2C;
+
+
+$font-sans: "noto sans TC";
+$font-kanit: "Kanit", sans-serif;
+
+$heading-1: 700 40px "noto sans TC", sans-serif;
+$heading-2: 700 32px "noto sans TC", sans-serif;
+$heading-3: 700 28px "noto sans TC", sans-serif;
+$heading-4: 700 24px "noto sans TC", sans-serif;
+$heading-5: 700 20px "noto sans TC", sans-serif;
+$heading-6: 700 16px "noto sans TC", sans-serif;
+$heading-7: 700 14px "noto sans TC", sans-serif;
+
+$body-1: 400 24px "noto sans TC", sans-serif;
+$body-1-M: 500 24px "noto sans TC", sans-serif;
+$body-2: 400 20px "noto sans TC", sans-serif;
+$body-2-M: 500 20px "noto sans TC", sans-serif;
+$body-3: 400 18px "noto sans TC", sans-serif;
+$body-3-M: 500 18px "noto sans TC", sans-serif;
+$body-4: 400 16px "noto sans TC", sans-serif;
+$body-4-M: 500 16px "noto sans TC", sans-serif;
+$body-5: 400 14px "noto sans TC", sans-serif;
+$body-5-M: 500 14px "noto sans TC", sans-serif;
+$body-6: 400 12px "noto sans TC", sans-serif;
+$body-6-M: 500 12px "noto sans TC", sans-serif;
+
+$kanit-1: 400 24px "Kanit", sans-serif;
+$kanit-1-B: 700 24px "Kanit", sans-serif;
+$kanit-2: 400 20px "Kanit", sans-serif;
+$kanit-2-B: 700 20px "Kanit", sans-serif;
+$kanit-3: 400 18px "Kanit", sans-serif;
+$kanit-3-B: 700 18px "Kanit", sans-serif;
+$kanit-4: 400 16px "Kanit", sans-serif;
+$kanit-4-B: 700 16px "Kanit", sans-serif;
+$kanit-5: 400 14px "Kanit", sans-serif;
+$kanit-5-B: 700 14px "Kanit", sans-serif;
+$kanit-6: 400 12px "Kanit", sans-serif;
+$kanit-6-B: 700 12px "Kanit", sans-serif;
+
+$shadow-text: 0 4px 8px rgba(0, 0, 0, 0.3);
+$shadow-pic: 0 5px 20px rgba(0, 0, 0, 0.3);
+$shadow-input: 0 0 30px rgba(0, 116, 182, 0.15);
+@mixin product-bg {
+  box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+}
+$transition: 0.3s;
+
+body {
+  color: $text;
+  font-family: "Kanit", "noto sans TC", sans-serif;
+  line-height: 1.5;
+  background-color: $primary-900;
+  font-size: 20px;
+  height: 1000px;
+  @media screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: $text;
+}
+
+input, textarea {
+  &::placeholder {
+    color: $white-30;
+  }
+}
+
+button {
+  transition: $transition;
+}
+
+select {
+  appearance: none;
+  background-image: url(../img/select-arrow.svg);
+  background-size: 18px;
+  background-position: calc(100% - 14px) center;
+  background-repeat: no-repeat;
+}
+
+main {
+  overflow: hidden;
+  min-height: calc(100vh - 61px);
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+  display: block;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $primary-600;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  &::before {
+    transition: $transition;
+  }
+}
+
+.btn {
+  border: 1px solid $primary-400;
+  padding: 8px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 0;
+  &-text {
+    font-size: 16px;
+    font-weight: 700;
+    transition: $transition;
+    margin: 0;
+  }
+  &-icon {
+    font-size: 16px;
+    &::before {
+      transition: $transition;
+    }
+  }
+  &-border {
+    background-color: transparent;
+    color: $primary-400;
+    font-weight: 700;
+    width: fit-content;
+    .btn {
+      &-text {
+        color: $primary-400;
+        font-weight: 700;
+      }
+      &-icon {
+        &::before {
+          color: $primary-600;
+        }
+      }
+    }
+    &:hover {
+      border-color: $primary-700;
+      color: $primary-700;
+      .btn {
+        &-text {
+          color: $primary-700;
+        }
+        &-icon {
+          &::before {
+            color: $primary-700;
+          }
+        }
+      }
+    }
+  }
+  &-border-onlyicon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid $primary-200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    .btn-icon {
+      font-size: 32px;
+      color: $primary-200;
+    }
+    &:hover {
+      background-color: $primary-200;
+      .btn-icon {
+        &::before {
+          color: $white;
+        }
+      }
+    }
+  }
+  &-fill {
+    background-color: $primary-400;
+    color: $white;
+    font-weight: 700;
+    width: fit-content;
+    .btn {
+      &-text {
+        color: $white;
+        font-weight: 700;
+      }
+      &-icon {
+        &::before {
+          color: $white;
+        }
+      }
+    }
+    &:hover {
+      background-color: $primary-700;
+      color: $white;
+      border-color: $primary-700;
+    }
+    &-light {
+      padding: 8px 36px;
+      background-color: $primary-200;
+      border-color: $primary-200;
+      .btn {
+        &-icon {
+          &::before {
+            color: $primary-700;
+          }
+        }
+        &-text {
+          color: $primary-700;
+        }
+      }
+      &:hover {
+        background-color: $primary-500;
+        border-color: $primary-500;
+        .btn {
+          &-icon {
+            &::before {
+              color: $white;
+            }
+          }
+          &-text {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &-alert {
+    width: 52px;
+    height: 32px;
+    border-color: $red;
+    color: $red;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+}
+
+.title {
+  font-size: 46px;
+  font-weight: 900;
+  margin-bottom: 36px;
+  text-align: center;
+  color: $primary-200;
+  @media screen and (max-width: 991px) {
+    font-size: 36px;
+  }
+}
+
+.text {
+  font-size: 16px;
+}
+
+.input-item {
+  display: flex;
+  height: 45px;
+  margin-bottom: 20px;
+  > label {
+    padding: 8px;
+    background-color: $primary-500;
+    color: $white;
+    font-weight: 900;
+    text-align: center;
+    display: block;
+    height: 100%;
+    letter-spacing: 0.05em;
+    border: 1px solid $primary-500;
+    &.bg-transparent {
+      border: 0;
+      color: $text;
+    }
+  }
+  > input {
+    height: 100%;
+    padding: 0 10px;
+    border: 1px solid $primary-500;
+  }
+  &.radio {
+    .radio {
+      &-main {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 8px 20px;
+      }
+      &-item {
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 4px;
+        > input {
+          width: 16px;
+          height: 16px;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            border: 1px solid $primary-500;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+          }
+          &::after {
+            position: absolute;
+            content: "";
+            width: 60%;
+            height: 60%;
+            background-color: $primary-500;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: 0;
+          }
+          &:checked {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+        > label {
+          font-size: 16px;
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  gap: 32px;
+  &-link {
+    padding: 0 0 6px;
+    border-radius: 0;
+    font-weight: 900;
+    color: $text !important;
+    font-size: 18px;
+    border-bottom: 2px solid transparent;
+    &.active {
+      background-color: transparent !important;
+      color: $primary-600 !important;
+      border-color: $primary-600;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 16px;
+    margin-bottom: 20px;
+    &-link {
+      white-space: nowrap;
+      font-size: 16px;
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  width: 400px;
+  background-color: $white;
+  padding: 24px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 5;
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.modal {
+  &-content {
+    border: 0;
+    border-radius: 0;
+  }
+  &-header {
+    border: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-end;
+    .btn-close {
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      background: none;
+      span {
+        font-size: 24px;
+      }
+    }
+  }
+  &-body {
+    padding: 0 40px 40px;
+  }
+  &-dialog {
+    margin-top: 100px;
+  }
+  @media screen and (max-width: 767px) {
+    &-body {
+      padding: 0 15px 40px;
+    }
+  }
+}

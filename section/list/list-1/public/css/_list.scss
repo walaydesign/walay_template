@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+$text: #333333;
+$white: #fff;
+$brown: #ca9969;
+$brown-2: #9c5c1c;
+$primary-50: #fffaf6;
+$primary-100: #fff1e3;
+$primary-200: #fddfc1;
+$primary-300: #e5c099;
+$primary-400: $brown;
+$primary-500: #b47d46;
+$primary-600: #9e6023;
+$primary-700: #85490d;
+$primary-800: #763b00;
+$primary-900: #4a2500;
+$dark-50: #f0f0f0;
+$dark-100: #dedede;
+$dark-200: #c5c5c5;
+$dark-300: #adadad;
+$dark-400: #919191;
+$dark-500: #707070;
+$dark-600: #515151;
+$dark-700: $text;
+$dark-800: #202020;
+$dark-900: #000000;
+$transition: 0.3s;
+$body-md: 16px;
+$body-lg: 18px;
+$serif-md: 700 16px "noto serif TC";
+$num-md: 700 20px "Titillium Web", sans-serif;
+$body-bold-lg: 700 18px "noto serif TC";
+$shadow-common: 0 4px 15px rgba(0, 0, 0, 0.15);
+$font-sans: "noto sans TC";
+$font-serif: "noto serif TC";
+$font-titillium: "Titillium Web", sans-serif;
+
+.list {
+    li {
+        padding-left: 25px;
+        margin-bottom: 12px;
+        position: relative;
+        font-weight: 700;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 13px;
+            height: 13px;
+            background-image: url(../img/list-decoration.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            left: 0;
+            top: 6px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
