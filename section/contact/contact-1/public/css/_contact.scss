@@ -15,7 +15,6 @@
         flex-direction: column;
         justify-content: center;
         padding: 20px 80px;
-        background-color: $primary-3;
         gap: 16px;
         height: 100%;
         max-width: 500px;
@@ -35,7 +34,6 @@
             transition: $transition;
             &:hover {
                 background-color: $white;
-                color: $primary-1;
             }
         }
     }

@@ -1,0 +1,368 @@
+.header {
+  background-color: $white;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  transition: $transition;
+  &__top {
+    position: relative;
+    padding: 64px 0;
+    width: 100%;
+    transition: $transition;
+  }
+  &__logo {
+    width: 280px;
+    margin: 0 auto;
+    transition: $transition;
+    > img {
+      width: 100%;
+    }
+  }
+  &__nav {
+    > ul {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      > li {
+        position: relative;
+        > ul {
+          position: absolute;
+          background-color: $white;
+          min-width: 110px;
+          top: 100%;
+          left: 0;
+          padding: 12px 0;
+          transition: $transition;
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(20px);
+          a {
+            padding: 8px 16px;
+            text-align: center;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 4px;
+            width: calc(100% - 32px);
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 4px;
+            background-color: $secondary-700;
+          }
+        }
+        &:hover {
+          > ul {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+          }
+        }
+      }
+      a {
+        position: relative;
+        font-weight: 700;
+        padding: 20px 0;
+        &.active,
+        &:hover {
+          color: $dark-300;
+        }
+        &.has-child {
+          padding-right: 18px;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-image: url(../img/arrow-down.svg);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  &__func {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    transition: $transition;
+  }
+  &__menu {
+    width: 28px;
+    height: 28px;
+    position: relative;
+    .bar {
+      position: absolute;
+      width: 88%;
+      height: 1.5px;
+      background-color: $primary-600;
+      transition: $transition;
+      left: 50%;
+      transform: translateX(-50%);
+      &-top {
+        top: 20%;
+      }
+      &-middle {
+        top: calc(50% - 0.5px);
+      }
+      &-bottom {
+        top: calc(80% - 1px);
+      }
+    }
+    &.active {
+      .bar {
+        top: 50%;
+        left: 50%;
+        &-top,
+        &-middle {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        &-bottom {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+    }
+  }
+  &-func-item {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    span {
+      font-size: 28px;
+      &::before {
+        color: $secondary-700;
+      }
+    }
+  }
+  &-searchbar {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    border: 1px solid transparent;
+    transition: $transition;
+    width: 28px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__input {
+      width: 0;
+      overflow: hidden;
+      transition: $transition;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $dark-300;
+      input {
+        height: 100%;
+        width: 160px;
+        padding: 8px 12px;
+      }
+    }
+    &__close {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      span {
+        font-size: 12px;
+        opacity: 0.8;
+        transition: $transition;
+        &::before {
+          color: $dark-400;
+        }
+      }
+      &:hover {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+    &__search {
+      height: 28px;
+      width: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 24px;
+      }
+      &:hover {
+        span {
+          &::before {
+            color: $primary-400;
+          }
+        }
+      }
+    }
+  }
+  &.searching {
+    .header {
+      &-searchbar {
+        border-color: $white;
+        width: 278px;
+        &__input {
+          width: 230px;
+        }
+      }
+      &-nav {
+        &__list {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  &.scrolldown {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+    .header {
+      &__top {
+        padding: 12px 0;
+        position: static;
+        width: fit-content;
+      }
+      &__logo {
+        width: 120px;
+      }
+      &__func {
+        right: 32px;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    &__top {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__logo {
+      width: 120px;
+      margin: 0;
+    }
+    &__nav {
+      position: fixed;
+      background-color: $white;
+      right: 0;
+      max-width: 400px;
+      width: 100%;
+      transition: $transition;
+      right: -450px;
+      top: 64px;
+      > ul {
+        display: block;
+        a {
+          padding: 12px 40px;
+          &::after {
+            width: 0;
+            height: 1px;
+            top: 50%;
+            left: -40px;
+          }
+          &.active,
+          &:hover {
+            &::after {
+              width: 60px;
+              height: 1px;
+            }
+          }
+          &.has-child {
+            &::before {
+              right: 40px;
+              transition: $transition;
+            }
+            &.dropdown {
+              &::before {
+                transform: translateY(-50%) rotate(180deg);
+              }
+            }
+          }
+        }
+        > li {
+          > ul {
+            position: relative;
+            top: inherit;
+            left: inherit;
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            display: none;
+            transition: none;
+            background-color: $primary-50;
+            &::before {
+              height: 2px;
+              width: 100%;
+              border-radius: 0;
+            }
+            a {
+              text-align: left;
+              padding-left: 48px;
+              padding-right: 48px;
+            }
+          }
+        }
+      }
+      &.active {
+        right: 0;
+      }
+    }
+    &__func {
+      gap: 8px;
+      position: static;
+      transform: none;
+    }
+    &-func-item {
+      p {
+        display: none;
+      }
+    }
+    &-searchbar {
+        &__input {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 64px;
+            padding: 12px 20px;
+            background-color: $primary-50;
+            display: none;
+            transition: none;
+        }
+        &__search {
+          &.dropdown {
+            span {
+              &::before {
+                color: $primary-400;
+              }
+            }
+          }
+        }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__logo {
+      width: 110px;
+    }
+  }
+}
