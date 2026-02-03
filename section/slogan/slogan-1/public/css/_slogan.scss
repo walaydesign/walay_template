@@ -1,0 +1,120 @@
+.slogan {
+  padding: 180px 20px 160px;
+  background-color: $secondary-700;
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/slogan-bg-1.svg), url(../img/slogan-bg-2.svg);
+  background-size: 17%, 20%;
+  background-position:
+    -1% center,
+    80% 0;
+  background-repeat: no-repeat, no-repeat;
+  &__wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 10vw;
+  }
+  &-text {
+    width: fit-content;
+    &__title {
+      color: $primary-400;
+      font-family: $font-en;
+      font-size: 60px;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+    &__list {
+      li {
+        color: $white;
+        font-size: 32px;
+        font-weight: 700;
+        padding-left: 60px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 32px;
+          height: 32px;
+          background-image: url(../img/check.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 12px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  &-pic {
+    width: 156px;
+  }
+  @media screen and (max-width: 1600px) {
+    background-size: 12%, 15%;
+    background-position:
+      -1% center,
+      85% 0;
+  }
+  @media screen and (max-width: 1399px) {
+    background-image: none;
+    &__wrapper {
+      gap: 32px;
+    }
+    &-pic {
+      width: 120px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    padding: 100px 20px 80px;
+    &__wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 60px;
+      position: relative;
+    }
+    &-text {
+      width: fit-content;
+      &__title {
+        font-size: 40px;
+        margin-bottom: 32px;
+      }
+      &__list {
+        li {
+          font-size: 24px;
+          margin-top: 12px;
+          padding-left: 50px;
+          &::before {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+    &-pic {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-text {
+      &__title {
+        font-size: 28px;
+      }
+      &__list {
+        li {
+          font-size: 18px;
+          padding-left: 40px;
+          &::before {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    &-pic {
+      width: 80px;
+    }
+  }
+}
