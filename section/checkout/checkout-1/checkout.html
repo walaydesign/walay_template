@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="checkout-product">
+        <h2 class="checkout-product_title">線上追思</h2>
+        <div class="checkout-product_content">
+          <div class="checkout-product_item">
+            <div class="checkout-product_pic">
+              <img src="./public/img/pic.png" alt="" />
+              <button class="checkout-product_x">
+                <span class="icon-x"></span>
+              </button>
+            </div>
+            <div class="checkout-product_text">
+              <h3 class="checkout-product_name">商品名稱</h3>
+              <div class="d-flex align-items-center justify-content-between">
+                <p class="checkout-product_price">$400</p>
+                <div class="product-num">
+                  <button class="btn-minus">
+                    <span class="icon-minus"></span>
+                  </button>
+                  <p class="product-num_val">1</p>
+                  <button class="btn-plus">
+                    <span class="icon-plus"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-product_item">
+            <div class="checkout-product_pic">
+              <img src="./public/img/pic.png" alt="" />
+              <button class="checkout-product_x">
+                <span class="icon-x"></span>
+              </button>
+            </div>
+            <div class="checkout-product_text">
+              <h3 class="checkout-product_name">商品名稱</h3>
+              <div class="d-flex align-items-center justify-content-between">
+                <p class="checkout-product_price">$400</p>
+                <div class="product-num">
+                  <button class="btn-minus">
+                    <span class="icon-minus"></span>
+                  </button>
+                  <p class="product-num_val">1</p>
+                  <button class="btn-plus">
+                    <span class="icon-plus"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-product_item">
+            <div class="checkout-product_pic">
+              <img src="./public/img/pic.png" alt="" />
+              <button class="checkout-product_x">
+                <span class="icon-x"></span>
+              </button>
+            </div>
+            <div class="checkout-product_text">
+              <h3 class="checkout-product_name">商品名稱</h3>
+              <div class="d-flex align-items-center justify-content-between">
+                <p class="checkout-product_price">$400</p>
+                <div class="product-num">
+                  <button class="btn-minus">
+                    <span class="icon-minus"></span>
+                  </button>
+                  <p class="product-num_val">1</p>
+                  <button class="btn-plus">
+                    <span class="icon-plus"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".product-num button").click(function () {
+    let num = parseInt(
+      $(this).parents(".product-num").find(".product-num_val").text()
+    );
+    if ($(this).hasClass("btn-minus")) {
+        if (num <= 0) {
+            num = 0;
+        } else {
+            num--;
+        }
+    } else if ($(this).hasClass("btn-plus")) {
+        num++;
+    }
+    $(this).parents(".product-num").find(".product-num_val").text(num);
+});
+    </script>
+  </body>
+</html>
