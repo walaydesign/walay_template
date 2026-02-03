@@ -1,0 +1,102 @@
+.step {
+    padding: 50px 20px 110px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 60px;
+        z-index: 0;
+        &.active {
+            .step {
+                &_num {
+                    background-color: $primary-700;
+                    border-color: $primary-700;
+                    p {
+                        color: $white;
+                    }
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                &_text {
+                    color: $primary-700;
+                    font-weight: 700;
+                }
+            }
+        }
+        &::before {
+            position: absolute;
+            width: calc(100% + 12px);
+            height: calc(100% + 12px);
+            border-radius: 50%;
+            background-color: rgba(0,123,255,0.6);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: calc((640px - 180px - 120px) / 2);
+            height: 1px;
+            background-color: $dark-400;
+            left: calc(100% + 20px);
+            top: 30px;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    &_num {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $dark-300;
+        >p {
+            font-size: 24px;
+            margin: 0;
+            font-weight: 700;
+            color: $dark-500;
+        }
+    }
+    &_text {
+        position: absolute;
+        white-space: nowrap;
+        margin: 0;
+        top: calc(100% + 24px);
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 24px;
+        color: $dark-500;
+    }
+    @media screen and (max-width: 640px) {
+        &_item {
+            &::after {
+                width: calc((100vw - 180px - 80px) / 2);
+            left: calc(100% + 10px);
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        &_text {
+            font-size: 18px;
+            top: calc(100% + 16px);
+        }
+    }
+}
