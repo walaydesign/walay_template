@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="cards-item">
+              <div class="cards-item-head">
+                <div class="cards-item-icon">
+                  <img src="./public/img/tool.svg" alt="" />
+                </div>
+                <div class="cards-item-quote">
+                  <p class="cards-item-quote__title">服務點數 (設計/開發)</p>
+                  <div class="cards-item-price">
+                    <p class="cards-item-price__num">NT$800</p>
+                    <p class="cards-item-price__unit">/ 1點 (1小時)</p>
+                  </div>
+                </div>
+              </div>
+              <p class="cards-item-text">
+                彈性購買工時，可用於設計或程式開發需求。點數無使用期限，用完為止。
+              </p>
+              <div class="cards-item-list">
+                <h3 class="cards-item-list__title">使用參考：</h3>
+                <ul>
+                  <li>名片設計：約 2-4 點</li>
+                  <li>信封設計：約 1-2 點</li>
+                  <li>簡易功能修改：依專案評估</li>
+                </ul>
+              </div>
+              <button
+                class="cards-item-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-buy"
+              >
+                選購點數
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="cards-item">
+              <div class="cards-item-head">
+                <div class="cards-item-icon">
+                  <img src="./public/img/picture.svg" alt="" />
+                </div>
+                <div class="cards-item-quote">
+                  <p class="cards-item-quote__title">IDJ 合法商用圖庫</p>
+                  <div class="cards-item-price">
+                    <p class="cards-item-price__num">NT$XXX</p>
+                    <p class="cards-item-price__unit">/ 張</p>
+                  </div>
+                </div>
+              </div>
+              <p class="cards-item-text">
+                IDJ
+                授權代理。無論是網站配圖、廣告素材，皆可安心商用，免除版權煩惱。
+              </p>
+              <div class="cards-item-list">
+                <h3 class="cards-item-list__title">使用參考：</h3>
+                <ul>
+                  <li>高解析度原始檔</li>
+                  <li>永久商業授權</li>
+                  <li>數百萬張高品質素材</li>
+                </ul>
+              </div>
+              <button
+                class="cards-item-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-buy"
+              >
+                瀏覽圖庫選購
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modal-buy"
+      tabindex="-1"
+      aria-labelledby="modal-buyLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button class="modal-close">
+              <img data-bs-dismiss="modal" src="./public/img/x.svg" alt="" />
+            </button>
+            <div class="buy-popup">
+              <div class="cards-item-icon">
+                <img src="./public/img/picture.svg" alt="" />
+              </div>
+              <h3 class="buy-popup__title">選購服務點數</h3>
+              <p class="buy-popup__price">單價：NT$800 / 點</p>
+              <div class="buy-popup__num">
+                <button class="btn-minus">
+                  <img src="./public/img/minus.svg" alt="" />
+                </button>
+                <input class="buy-num" type="number" value="1" />
+                <button class="btn-plus">
+                  <img src="./public/img/plus.svg" alt="" />
+                </button>
+              </div>
+              <div class="buy-popup-total">
+                <p class="buy-popup-total__title">總計費用</p>
+                <p class="buy-popup-total__num">NT$800</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="modal-btn">確認加購</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".buy-popup__num button").click(function () {
+        let num = parseInt(
+          $(this).parents(".buy-popup__num").find(".buy-num").val(),
+        );
+        if ($(this).hasClass("btn-minus")) {
+          if (num <= 0) {
+            num = 0;
+          } else {
+            num--;
+          }
+        } else if ($(this).hasClass("btn-plus")) {
+          num++;
+        }
+        $(this).parents(".buy-popup__num").find(".buy-num").val(num);
+      });
+    </script>
+  </body>
+</html>

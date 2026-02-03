@@ -1,0 +1,285 @@
+.cards {
+  padding: 100px 0;
+  .row {
+    margin-left: -20px;
+    margin-right: -20px;
+    > div {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &-item {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.1);
+    border: 1px solid $white;
+    transition: $transition;
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 66px;
+      height: 66px;
+      border-radius: 12px;
+      background-color: $primary-100;
+      img {
+        width: 36px;
+      }
+    }
+    &-quote {
+      width: fit-content;
+      &__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 0;
+      }
+    }
+    &-price {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      p {
+        margin: 0;
+      }
+      &__num {
+        color: $primary-700;
+        font-weight: 700;
+        font-size: 24px;
+      }
+      &__unit {
+        color: $dark-400;
+        font-weight: 500;
+      }
+    }
+    &-text {
+      color: $dark-500;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    &-list {
+      background-color: #f8faff;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px dashed $primary-200;
+      margin-bottom: 20px;
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+        padding-left: 22px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 20px;
+          height: 20px;
+          background-image: url(../img/bulb.svg);
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+      ul {
+        list-style: disc;
+        color: $dark-500;
+        font-weight: 500;
+        padding-left: 24px;
+      }
+    }
+    &-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 100px;
+      background-color: $primary-100;
+      color: $primary-700;
+      font-weight: 700;
+      font-size: 18px;
+      transition: $transition;
+      &:hover {
+        background-color: $primary-700;
+        color: $white;
+      }
+    }
+    &:hover {
+      border-color: $primary-700;
+      box-shadow: 0 0 12px rgba(0, 123, 255, 0.2);
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &-item {
+      margin-bottom: 20px;
+      &-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 10px;
+        img {
+          width: 28px;
+        }
+      }
+      &-quote {
+        &__title {
+          font-size: 16px;
+          text-align: right;
+        }
+      }
+      &-price {
+        justify-content: flex-end;
+        &__num {
+          font-size: 20px;
+        }
+        &__unit {
+          font-size: 14px;
+        }
+      }
+      &-text {
+        margin-bottom: 16px;
+      }
+      &-list {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.buy-popup {
+  text-align: center;
+  .cards-item-icon {
+    margin: 0 auto 16px;
+  }
+  &__title {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &__price {
+    font-size: 18px;
+    color: $dark-500;
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  &__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 30px;
+    button {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $primary-700;
+      img {
+        width: 20px;
+      }
+    }
+    input {
+      width: 120px;
+      text-align: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid $dark-100;
+      font-size: 28px;
+      font-weight: 500;
+    }
+  }
+  &-total {
+    padding: 12px;
+    border-radius: 10px;
+    background-color: $primary-100;
+    text-align: center;
+    &__title {
+      font-size: 18px;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: $dark-500;
+    }
+    &__num {
+      font-size: 30px;
+      margin: 0;
+      font-weight: 700;
+      color: $primary-700;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &__title {
+      font-size: 24px;
+    }
+    &__price {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    &__num {
+      gap: 16px;
+      margin-bottom: 24px;
+      button {
+        width: 40px;
+        height: 40px;
+        img {
+          width: 16px;
+        }
+      }
+      input {
+        width: 80px;
+        padding-bottom: 8px;
+        font-size: 20px;
+      }
+    }
+    &-total {
+      &__title {
+        font-size: 16px;
+      }
+      &__num {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.modal {
+  &-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    opacity: 1 !important;
+  }
+  &-content {
+    border-radius: 20px;
+  }
+  &-body {
+    padding: 32px 32px 16px;
+  }
+  &-close {
+    padding: 0;
+    width: 20px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    > img {
+      width: 100%;
+    }
+  }
+  &-footer {
+    padding: 0 32px 32px;
+    border: 0;
+  }
+  &-btn {
+    width: 100%;
+    border-radius: 100px;
+    height: 54px;
+    background: linear-gradient(to right, #2db3ff 0%, #525fcc 100%);
+    color: $white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
