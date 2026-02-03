@@ -1,24 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const isDesktop = () => window.innerWidth >= 991;
-  // searchbar - open
-  // document
-  //   .querySelector(".header-searchbar__search")
-  //   ?.addEventListener("click", function () {
-  //     if (!isDesktop()) return;
-  //     const header = document.querySelector(".header");
-  //     if (header && !header.classList.contains("searching")) {
-  //       header.classList.add("searching");
-  //     }
-  //   });
-
-  // searchbar - close
-  // document
-  //   .querySelector(".header-searchbar__close")
-  //   ?.addEventListener("click", function () {
-  //     if (!isDesktop()) return;
-  //     document.querySelector(".header")?.classList.remove("searching");
-  //   });
-});
 $(".header-searchbar__search").click(function () {
   if ($(window).width() > 991) {
     if (!$(".header").hasClass("searching")) {

@@ -1,0 +1,42 @@
+.pic-text {
+  &-item {
+    text-align: center;
+    &__pic {
+      width: 205px;
+      margin: 0 auto 40px;
+    }
+    &__title {
+      font-size: 18px;
+      position: relative;
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 90px;
+        height: 2px;
+        background-color: $primary-400;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &__text {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &-item {
+      margin-bottom: 40px;
+      &__pic {
+        margin-bottom: 20px;
+      }
+      &__title {
+        // padding-bottom: 8px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
