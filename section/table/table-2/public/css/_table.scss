@@ -1,0 +1,74 @@
+.table {
+    table {
+        width: 100%;
+        min-width: 900px;
+    }
+    th {
+      padding: 16px;
+        background-color: $primary-700;
+        font-weight: 700;
+        color: $white;
+    }
+    td {
+        padding: 16px;
+        border-bottom: 1px solid #BECEDB;
+        font-weight: 500;
+        transition: $transition;
+        &:first-child {
+          border-left: 1px solid #BECEDB;
+        }
+        &:last-child {
+          border-right: 1px solid #BECEDB;
+        }
+    }
+    tr {
+      &:last-child {
+        td {
+          &:first-child {
+            border-radius: 0 0 0 4px;
+          }
+          &:last-child {
+            border-radius: 0 0 4px 0;
+          }
+        }
+      }
+      &:hover {
+        td {
+          background-color: #F0FAFF;
+        }
+      }
+    }
+    &_func {
+        display: flex;
+        gap: 16px;
+        .btn {
+            padding: 6px 12px;
+            font-size: 14px;
+            width: auto;
+            height: auto;
+        }
+    }
+    .state {
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-weight: 700;
+      color: $white;
+      font-size: 14px;
+      width: fit-content;
+      &.paid {
+        background-color: #4EB063;
+      }
+      &.processing {
+        background-color: #EF7B1A;
+      }
+      &.done {
+        background-color: #797979;
+      }
+    }
+    @media screen and (max-width: 991px) {
+      .container {
+        max-width: inherit;
+        overflow-x: auto;
+      }
+    }
+}
