@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/css/aos/aos.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="./public/css/form-2.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="form">
+          <div class="form-item">
+            <label for="">亡者照片</label>
+            <div class="form_pic form_media uploaded">
+              <img src="./public/img/pic.png" alt="" />
+              <button class="form_media_upload">
+                <span class="icon-cloud"></span>
+                <p>上傳</p>
+                <input type="file" />
+              </button>
+            </div>
+            <div class="form_pic form_media empty">
+              <button class="form_media_upload">
+                <span class="icon-cloud"></span>
+                <p>上傳</p>
+                <input type="file" />
+              </button>
+            </div>
+          </div>
+          <div class="form-item">
+            <label for="">生平事蹟</label>
+            <textarea name="" id=""></textarea>
+          </div>
+          <div class="form-item">
+            <label for="">座右銘</label>
+            <ol class="form-item_list">
+              <li><input type="text" /></li>
+            </ol>
+            <button class="btn btn-fill-light mx-auto">
+              <span class="btn-icon icon-plus"></span>
+              <p class="btn-text">新增時段</p>
+            </button>
+          </div>
+          <div class="form-item">
+            <label for="">追思牆</label>
+            <div class="form-item_timerange">
+              <div class="form-item_timerange_item">
+                <div class="form-item_timerange_content">
+                    <p class="form-item_timerange_num">1.</p>
+                  <div class="form-item_timerange_detail">
+                    <label for="">配送日期</label>
+                    <input type="text" class="form-item_timerange_date" />
+                  </div>
+                  <div class="form-item_timerange_detail">
+                    <label for="">配送時段</label>
+                    <select name="" id="">
+                      <option value="">請選擇</option>
+                    </select>
+                    <span>~</span>
+                    <select name="" id="">
+                      <option value="">請選擇</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="btn btn-alert">刪除</button>
+            </div>
+            </div>
+            <button class="btn btn-fill-light mx-auto">
+              <span class="btn-icon icon-plus"></span>
+              <p class="btn-text">新增時段</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script src="./public/js/aos/aos.js"></script>
+    <script src="./public/js/jquery-ui/jquery-ui.js"></script>
+    <script src="./public/js/common.js"></script>
+  </body>
+</html>
