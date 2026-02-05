@@ -1,0 +1,152 @@
+.about {
+  position: relative;
+  z-index: 0;
+  .container {
+    max-width: 1600px;
+  }
+  &-bg {
+    position: absolute;
+    width: 70%;
+    height: calc((100% - 214px) * 0.84);
+    background-color: $secondary-700;
+    z-index: -1;
+    top: 214px;
+    right: 0;
+  }
+  &-wrapper {
+    display: flex;
+    margin-bottom: 88px;
+    position: relative;
+  }
+  &-logo {
+    position: absolute;
+    width: 18%;
+    top: 42%;
+    right: 2%;
+  }
+  &-pic {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+  &-text {
+    width: 55%;
+    padding-left: 116px;
+    p {
+      font-size: 15px;
+      margin: 0;
+      color: $white;
+      font-weight: 100;
+      line-height: 2;
+    }
+  }
+  &-title {
+    margin-bottom: 112px;
+    &__ch {
+      color: $secondary-700;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 44px;
+    }
+    &__en {
+      font-family: $font-en;
+      font-size: 72px;
+      color: $primary-400;
+      margin-bottom: 88px;
+    }
+    &__slogan {
+      font-family: $font-en;
+      font-size: 72px;
+      color: $white;
+      margin-bottom: 80px;
+      margin-left: -290px;
+    }
+  }
+  &-bigpic {
+    width: 88%;
+  }
+  &-subtitle {
+    font-weight: 100;
+    color: $primary-400;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    line-height: 1.6;
+    margin: 0;
+  }
+  &-intro {
+    width: 70%;
+    .about-subtitle {
+      margin-bottom: 32px;
+    }
+    hr {
+      border-top: 0.5px solid $white;
+      opacity: 1;
+      margin: 20px 0;
+    }
+  }
+  &-feature {
+    margin-bottom: 28px;
+  }
+  @media screen and (max-width: 991px) {
+    background-color: $secondary-700;
+  &-bg {
+    display: none;
+  }
+  &-wrapper {
+    margin-bottom: 44px;
+    flex-direction: column;
+    gap: 24px;
+  }
+  &-logo {
+    position: absolute;
+    width: 18%;
+    top: 3%;
+    right: 2%;
+  }
+  &-pic {
+    width: 100%;
+    order: 2;
+  }
+  &-text {
+    width: 100%;
+    padding: 0;
+    order: 1;
+  }
+  &-title {
+    margin-bottom: 52px;
+    &__ch {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    &__en {
+      font-size: 40px;
+      margin-bottom: 32px;
+    }
+    &__slogan {
+      font-size: 40px;
+      margin-bottom: 24px;
+      margin-left: 0;
+    }
+  }
+  &-bigpic {
+    width: 100%;
+  }
+  &-subtitle {
+    font-size: 20px;
+  }
+  &-intro {
+    width: 100%;
+    .about-subtitle {
+      margin-bottom: 16px;
+    }
+    hr {
+      margin: 12px 0;
+    }
+  }
+  &-feature {
+    margin-bottom: 12px;
+  }
+    
+  }
+}
