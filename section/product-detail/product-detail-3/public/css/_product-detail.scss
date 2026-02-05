@@ -1,0 +1,148 @@
+.product-detail {
+  .container {
+    > .row {
+      margin-left: -25px;
+      margin-right: -25px;
+      align-items: center;
+      > div {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+  }
+  &_pic {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &_side {
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+    .swiper-slide {
+      height: auto !important;
+      cursor: pointer;
+    }
+    &_item {
+      position: relative;
+      width: 100%;
+      padding-bottom: 130%;
+      > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &_swiper {
+    width: calc(100% - 100px - 12px);
+    overflow: hidden;
+    position: relative;
+    &_item {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%;
+      > img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+      }
+    }
+    .swiper-pagination {
+        bottom: 0;
+        display: none;
+        &-bullet {
+            background-color: $primary-50;
+            opacity: 1;
+            &-active {
+                background-color: $secondary-500;
+            }
+        }
+    }
+  }
+  &_title {
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  &_intro {
+    margin-bottom: 32px;
+    text-align: justify;
+    color: #595757;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  &_price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 116px;
+    &_current {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+    }
+    &_origin {
+      font-size: 22px;
+      color: #b5b5b6;
+      margin: 0;
+      text-decoration: line-through;
+    }
+  }
+  &_btn {
+    font-size: 18px;
+    color: $white;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    background-color: $secondary-700;
+    width: 325px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: $primary-400;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    &_pic {
+      margin-bottom: 40px;
+    }
+    &_side {
+      display: none;
+    }
+    &_swiper {
+      width: 100%;
+    padding-bottom: 24px;
+       .swiper-pagination {
+        display: block;
+       }
+    }
+    &_title {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+    &_intro {
+      margin-bottom: 20px;
+    }
+    &_price {
+      margin-bottom: 56px;
+      &_current {
+        font-size: 20px;
+      }
+      &_origin {
+        font-size: 16px;
+      }
+    }
+    &_btn {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+}

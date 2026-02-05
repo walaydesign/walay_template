@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="product-detail">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="product-detail_pic">
+                <div class="swiper-container product-detail_side">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="product-detail_side_item">
+                        <img src="./public/img/product-1.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_side_item">
+                        <img src="./public/img/product-2.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_side_item">
+                        <img src="./public/img/product-3.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_side_item">
+                        <img src="./public/img/product-4.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_side_item">
+                        <img src="./public/img/product-5.webp" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-container product-detail_swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="product-detail_swiper_item">
+                        <img src="./public/img/product-1.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_swiper_item">
+                        <img src="./public/img/product-2.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_swiper_item">
+                        <img src="./public/img/product-3.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_swiper_item">
+                        <img src="./public/img/product-4.webp" alt="" />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="product-detail_swiper_item">
+                        <img src="./public/img/product-5.webp" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="product-detail_text">
+                <h1 class="product-detail_title">[私密清潔]私密洗 ｜女性｜</h1>
+                <p class="product-detail_intro">
+                  業界首創四合一真正高效私密保健<br />
+                  3天K.O妳開不了口的私密困擾<br />
+                  <span class="icon-check-2"></span>Exocyan™蔓越莓萃取物-36mg
+                  前花青素<br />
+                  天然萃取 • 強效保護<br />
+                  <span class="icon-check-2"></span
+                  >D-甘露糖-超強足量1000mg<br />
+                  快速排除•清爽通暢<br />
+                  <span class="icon-check-2"></span
+                  >LA-14+HN001益生菌-100億好菌添加<br />
+                  好菌滿滿 •調節私密<br />
+                  <span class="icon-check-2"></span
+                  >日本愛宕柿萃取物-食品級專利消臭素材<br />
+                  純淨天然•零味煩惱
+                </p>
+                <div class="product-detail_price">
+                  <p class="product-detail_price_current">NT$1,180</p>
+                  <p class="product-detail_price_origin">NT$1,680</p>
+                </div>
+                <button class="product-detail_btn">加入購物車</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiperSmall = new Swiper(".product-detail_side", {
+        direction: "vertical",
+        slidesPerView: 4,
+        spaceBetween: 12,
+        slidesPerGroup: 4,
+      })
+      var swiperBig = new Swiper(".product-detail_swiper", {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        thumbs: {
+            swiper: swiperSmall,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      })
+    </script>
+  </body>
+</html>
