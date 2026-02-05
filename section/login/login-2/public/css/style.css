@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Rowdies:wght@300;400;700&display=swap");
+body {
+  color: #425f4c;
+  font-family: "Noto Sans TC", sans-serif;
+  height: 1000px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../img/select-arrow.svg);
+  background-size: 18px;
+  background-position: calc(100% - 14px) center;
+  background-repeat: no-repeat;
+}
+
+main {
+  overflow: hidden;
+  min-height: calc(100vh - 61px);
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #425f4c;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #889347;
+}
+
+a:hover [class^="icon-"]::before, a:hover [class*=" icon-"]::before {
+  color: #889347;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login {
+  padding: 110px 0 160px;
+}
+
+.login .container {
+  max-width: 600px;
+}
+
+.login-title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 991px) {
+  .login {
+    padding: 56px 0 80px;
+  }
+  .login-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+.form-item {
+  height: 50px;
+  border-bottom: 1px solid #dcdddd;
+  margin-bottom: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-item input {
+  width: 100%;
+  height: 100%;
+}
+
+.form-item input::-webkit-input-placeholder {
+  color: #9fa0a0;
+}
+
+.form-item input:-ms-input-placeholder {
+  color: #9fa0a0;
+}
+
+.form-item input::-ms-input-placeholder {
+  color: #9fa0a0;
+}
+
+.form-item input::placeholder {
+  color: #9fa0a0;
+}
+
+.form-item--password button {
+  width: 24px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-item--password button span {
+  font-size: 24px;
+}
+
+.form-item--password button span::before {
+  color: #231815;
+}
+
+.form-item--password button span.icon-open-eye {
+  display: none;
+}
+
+.form-item--password button.open-eye span.icon-open-eye {
+  display: block;
+}
+
+.form-item--password button.open-eye span.icon-close-eye {
+  display: none;
+}
+
+.form-link {
+  color: #c8d286;
+  margin-bottom: 28px;
+}
+
+.form-btn {
+  width: 100%;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #425f4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+}
+
+.form-btn.btn-fill {
+  background-color: #425f4c;
+  color: #fff;
+}
+
+.form-btn.btn-border {
+  color: #c8d286;
+}
+
+.form-social {
+  margin-top: 36px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.form-social__text {
+  margin-bottom: 20px;
+}
+
+.form-social__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 8px;
+}
+
+.form-social__main button {
+  margin: 0;
+  padding: 0;
+}
+
+.form-social__main button span {
+  font-size: 52px;
+}
+
+@media screen and (max-width: 991px) {
+  .form-item {
+    height: 44px;
+    margin-bottom: 16px;
+  }
+  .form-link {
+    margin-bottom: 16px;
+  }
+  .form-btn {
+    height: 48px;
+    font-size: 18px;
+  }
+  .form-social {
+    margin-top: 20px;
+    margin-bottom: 52px;
+  }
+  .form-social__text {
+    margin-bottom: 12px;
+  }
+  .form-social__main {
+    gap: 4px;
+  }
+  .form-social__main button span {
+    font-size: 40px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

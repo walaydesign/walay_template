@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Rowdies:wght@300;400;700&display=swap');
+
+$white: #fff;
+$brown: #b28247;
+$primary-50:#efefe6;
+$primary-100:#d4d4b9;
+$primary-200:#e3e9d3;
+$primary-300:#ccd7be;
+$primary-400:#c8d286;
+$primary-500:#a8b364;
+$primary-600:#889347;
+$primary-700:#68722e;
+$primary-800:#4b531b;
+$primary-900:#2b300d;
+$secondary-50:#fbfffd;
+$secondary-100:#edf9f2;
+$secondary-200:#d6e7dd;
+$secondary-300:#b7cfc0;
+$secondary-400:#97b4a2;
+$secondary-500:#7b9b87;
+$secondary-600:#60806c;
+$secondary-700:#425f4c;
+$secondary-800:#2a4232;
+$secondary-900:#23392b;
+$dark-50:#dcdddd;
+$dark-100:#DEDEDE;
+$dark-200:#C5C5C5;
+$dark-300:#bfc0c0;
+$dark-400:#9fa0a0;
+$dark-500:#707070;
+$dark-600:#515151;
+$dark-700:#333333;
+$dark-800:#595757;
+$dark-900:#000000;
+$text: $secondary-700;
+$transition: 0.3s;
+$font-en: "Rowdies", sans-serif;
+
+$nav-top-mobile: calc(100vh - 70px);
+
+body {
+  color: $text;
+  font-family: "Noto Sans TC", sans-serif;
+  height: 1000px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+button {
+  transition: $transition;
+}
+
+select {
+  appearance: none;
+  background-image: url(../img/select-arrow.svg);
+  background-size: 18px;
+  background-position: calc(100% - 14px) center;
+  background-repeat: no-repeat;
+}
+
+main {
+  overflow: hidden;
+  min-height: calc(100vh - 61px);
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+  display: block;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $primary-600;
+    [class^="icon-"], [class*=" icon-"] {
+      &::before {
+        color: $primary-600;
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

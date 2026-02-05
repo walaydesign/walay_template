@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="login">
+        <div class="container">
+          <h2 class="login-title">登入</h2>
+          <div class="form-item">
+            <input type="text" placeholder="電郵或手機號碼">
+          </div>
+          <div class="form-item form-item--password">
+            <input type="password" placeholder="密碼">
+            <button>
+              <span class="icon-close-eye"></span>
+              <span class="icon-open-eye"></span>
+            </button>
+          </div>
+          <a href="" class="form-link">忘記密碼？</a>
+          <button class="form-btn btn-fill">開始購物吧  ！</button>
+          <div class="form-social">
+            <p class="form-social__text">或使用社群帳號登入</p>
+            <div class="form-social__main">
+              <button><span class="icon-line-3"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span></span></button>
+              <button><span class="icon-fb-1"></span></button>
+            </div>
+          </div>
+          <h2 class="login-title">還不是會員？</h2>
+          <button class="form-btn btn-border">註冊會員</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      $(".form-item--password button").click(function() {
+        if($(this).hasClass("open-eye")) {
+          $(this).removeClass("open-eye");
+          $(this).parents(".form-item--password").find("input").attr("type","password");
+        }else {
+          $(this).addClass("open-eye");
+          $(this).parents(".form-item--password").find("input").attr("type","text");
+        }
+      })
+    </script>
+  </body>
+</html>
