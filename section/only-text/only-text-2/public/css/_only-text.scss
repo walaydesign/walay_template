@@ -1,0 +1,119 @@
+.only-text {
+  text-align: center;
+  padding: 172px 0;
+  position: relative;
+  &__logo {
+    width: 270px;
+    margin: 0 auto 72px;
+  }
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    line-height: 1.7;
+    margin-bottom: 148px;
+  }
+  &__highlight {
+    max-width: 720px;
+    margin: 0 auto 52px;
+    padding: 0 60px;
+    font-size: 28px;
+    font-weight: 100;
+    line-height: 2.1;
+    letter-spacing: 0.2em;
+    // background-image: url(../img/quote-left.svg), url(../img/quote-right.svg);
+    // background-size: 32px, 32px;
+    // background-position: 0 center, right center;
+    // background-repeat: no-repeat, no-repeat;
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 32px;
+      height: 88px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &::before {
+      background-image: url(../img/quote-left.svg);
+      left: 0;
+    }
+    &::after {
+      background-image: url(../img/quote-right.svg);
+      right: 0;
+    }
+  }
+  &__text {
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    margin: 0;
+    color: $brown;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    transform: rotate(33deg);
+    background-color: $secondary-700;
+    transform-origin: center;
+  }
+  &::before {
+    top: -22%;
+    right: 9%;
+    height: 660px;
+  }
+  &::after {
+    top: 172px;
+    left: 9%;
+    height: 460px;
+  }
+  @media screen and (max-width: 1199px) {
+    padding: 80px 0;
+    &__logo {
+      width: 140px;
+      margin: 0 auto 36px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-bottom: 72px;
+    }
+    &__highlight {
+      margin: 0 auto 24px;
+      padding: 0 32px;
+      font-size: 20px;
+      &::before,
+      &::after {
+        width: 20px;
+        height: 55px;
+      }
+    }
+    &__text {
+      font-size: 16px;
+    }
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &__logo {
+      width: 120px;
+      margin: 0 auto 20px;
+    }
+    &__title {
+      font-size: 20px;
+      margin-bottom: 60px;
+    }
+    &__highlight {
+      margin: 0 auto 16px;
+      font-size: 18px;
+    }
+  }
+}
