@@ -107,7 +107,7 @@ ul {
     padding: 56px 0 80px;
   }
   .login-title {
-    font-size: 32px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
 }
@@ -240,6 +240,10 @@ ul {
 
 .form-social__main button span {
   font-size: 52px;
+}
+
+.form-social__main button span.icon-fb-1::before {
+  color: #2f6db6;
 }
 
 @media screen and (max-width: 991px) {
