@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+body {
+  color: #333333;
+  font-family: "Noto Sans TC", sans-serif;
+  height: 1000px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+button {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../img/select-arrow.svg);
+  background-size: 18px;
+  background-position: calc(100% - 14px) center;
+  background-repeat: no-repeat;
+}
+
+main {
+  overflow: hidden;
+  min-height: calc(100vh - 61px);
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding-top: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #9e6023;
+}
+
+a:hover [class^="icon-"]::before, a:hover [class*=" icon-"]::before {
+  color: #9e6023;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.account-sidebar {
+  width: 260px;
+  background-color: #fff;
+  padding: 60px 16px;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.account-sidebar_pic {
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.account-sidebar_pic > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.account-sidebar_nav li {
+  margin: 4px 0;
+}
+
+.account-sidebar_nav a {
+  display: block;
+  padding: 12px 24px;
+  font-weight: 900;
+  position: relative;
+  z-index: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.account-sidebar_nav a::before {
+  position: absolute;
+  width: 10px;
+  content: "";
+  height: 10px;
+  background-image: url(../img/nav-list-decoration.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.account-sidebar_nav a::after {
+  position: absolute;
+  content: "";
+  width: calc(100% + 20px);
+  height: 100%;
+  background-color: #ca9969;
+  top: 0;
+  right: 20px;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.account-sidebar_nav a:hover, .account-sidebar_nav a.active {
+  color: #fff;
+}
+
+.account-sidebar_nav a:hover::before, .account-sidebar_nav a:hover::after, .account-sidebar_nav a.active::before, .account-sidebar_nav a.active::after {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */

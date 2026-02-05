@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+$text: #333333;
+$white: #fff;
+$brown: #ca9969;
+$brown-2: #9c5c1c;
+$primary-50: #fffaf6;
+$primary-100: #fff1e3;
+$primary-200: #fddfc1;
+$primary-300: #e5c099;
+$primary-400: $brown;
+$primary-500: #b47d46;
+$primary-600: #9e6023;
+$primary-700: #85490d;
+$primary-800: #763b00;
+$primary-900: #4a2500;
+$dark-50: #f0f0f0;
+$dark-100: #dedede;
+$dark-200: #c5c5c5;
+$dark-300: #adadad;
+$dark-400: #919191;
+$dark-500: #707070;
+$dark-600: #515151;
+$dark-700: $text;
+$dark-800: #202020;
+$dark-900: #000000;
+$transition: 0.3s;
+$body-md: 16px;
+$body-lg: 18px;
+$serif-md: 700 16px "noto serif TC";
+$num-md: 700 20px "Titillium Web", sans-serif;
+$body-bold-lg: 700 18px "noto serif TC";
+$shadow-common: 0 4px 15px rgba(0, 0, 0, 0.15);
+$font-sans: "noto sans TC";
+$font-serif: "noto serif TC";
+$font-titillium: "Titillium Web", sans-serif;
+
+body {
+  color: $text;
+  font-family: "Noto Sans TC", sans-serif;
+  height: 1000px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: none;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+button {
+  transition: $transition;
+}
+
+select {
+  appearance: none;
+  background-image: url(../img/select-arrow.svg);
+  background-size: 18px;
+  background-position: calc(100% - 14px) center;
+  background-repeat: no-repeat;
+}
+
+main {
+  overflow: hidden;
+  min-height: calc(100vh - 61px);
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+  display: block;
+  transition: $transition;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $primary-600;
+    [class^="icon-"], [class*=" icon-"] {
+      &::before {
+        color: $primary-600;
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
