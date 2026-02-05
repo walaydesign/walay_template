@@ -16,11 +16,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./public/css/aos/aos.css" />
+    <link rel="stylesheet" href="./public/css/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="./public/icomoon/style.css" />
     <link rel="stylesheet" href="./public/css/style.css" />
-    <link rel="stylesheet" href="./public/css/form-2.css" />
   </head>
   <body>
     <main>
@@ -66,7 +64,7 @@
                     <p class="form-item_timerange_num">1.</p>
                   <div class="form-item_timerange_detail">
                     <label for="">配送日期</label>
-                    <input type="text" class="form-item_timerange_date" />
+                    <input type="text" class="form-item_timerange_date" id="datepicker" />
                   </div>
                   <div class="form-item_timerange_detail">
                     <label for="">配送時段</label>
@@ -87,15 +85,24 @@
               <p class="btn-text">新增時段</p>
             </button>
           </div>
+          <div class="form-item">
+              <div id="twzipcode" class="twzipcode"></div>
+                <input type="text" class="input" placeholder="請填寫地址" />
+            </div>
         </div>
       </div>
     </main>
 
     <script src="./public/js/jquery/jquery.min.js"></script>
     <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
-    <script src="./public/js/aos/aos.js"></script>
     <script src="./public/js/jquery-ui/jquery-ui.js"></script>
+    <script src="./public/js/twzipcode/jquery.twzipcode.js"></script>
     <script src="./public/js/common.js"></script>
+    <script>
+      $(function () {
+        $("#datepicker").datepicker();
+      });
+      $("#twzipcode").twzipcode({});
+    </script>
   </body>
 </html>
