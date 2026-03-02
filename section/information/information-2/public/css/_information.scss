@@ -1,0 +1,139 @@
+.information {
+  &-title {
+    font-size: 22px;
+    color: $primary-700;
+    margin-bottom: 36px;
+  }
+  &-overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    &__list {
+      li {
+        font-size: 17px;
+        line-height: 2;
+        font-weight: 500;
+      }
+    }
+    &-title {
+      color: #797979;
+    }
+    &__status {
+      .status {
+        width: 150px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        color: $white;
+        text-align: center;
+        background-color: #4eb063;
+        margin-bottom: 4px;
+      }
+      .remark {
+        text-align: center;
+        font-size: 17px;
+        font-weight: 500;
+        margin: 0;
+      }
+    }
+  }
+  &-sec {
+    background-color: #f8faff;
+    border-radius: 10px;
+    padding: 4px 24px;
+    margin-bottom: 20px;
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: $primary-700;
+      margin-bottom: 20px;
+      padding: 20px 0;
+      border-bottom: 1px dashed #B7C7D3;
+    }
+    .row {
+      .information-item {
+        border: 0;
+        padding: 0 0 20px;
+        display: block;
+        &__title {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  &-item {
+    padding: 20px 0;
+    border-bottom: 1px dashed #b7c7d3;
+    display: flex;
+    justify-content: space-between;
+    &__title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    &__intro {
+      font-weight: 500;
+      color: #797979;
+      margin: 0;
+    }
+    &__price {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0;
+    }
+    ul {
+      li {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 2;
+      }
+    }
+  }
+  &-total {
+    padding-top: 16px;
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.9;
+      }
+      &.total {
+        p {
+          margin-top: 8px;
+          font-size: 20px;
+          font-weight: 700;
+          color: $primary-700;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    &-overview {
+      display: block;
+    &__list {
+      margin-bottom: 24px;
+    }
+    &__status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .status {
+        width: fit-content;
+        padding: 4px 12px;
+        height: auto;
+        font-size: 14px;
+        margin: 0;
+      }
+      .remark {
+        font-size: 14px;
+      }
+    }
+  }
+  }
+}
