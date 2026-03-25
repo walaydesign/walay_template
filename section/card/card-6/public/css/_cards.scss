@@ -1,0 +1,53 @@
+.cards {
+  padding: 120px 0;
+  background-color: $primary-800;
+  .row {
+    margin-left: -20px;
+    margin-right: -20px;
+    > div {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+  &-item {
+    padding: 40px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    height: 100%;
+    &__icon {
+      margin: 0 auto 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: $primary-700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 40px;
+        &::before {
+          color: $secondary-500;
+        }
+      }
+    }
+    &__title {
+      font: $heading-5;
+      margin-bottom: 12px;
+    }
+    &__description {
+      font: $body-3;
+      margin: 0;
+      color: $primary-100;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding: 60px 0;
+    &-item {
+      margin-bottom: 32px;
+      height: auto;
+      &__description {
+      font: $body-4;
+    }
+    }
+  }
+}

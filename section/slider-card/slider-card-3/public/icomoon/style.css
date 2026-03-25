@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?m56te6');
+  src:  url('fonts/icomoon.eot?m56te6#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?m56te6') format('truetype'),
+    url('fonts/icomoon.woff?m56te6') format('woff'),
+    url('fonts/icomoon.svg?m56te6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book2:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-chart:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-chip:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-desktop:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-layer:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-lock:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-plugin:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-signal:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-structure:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-wave:before {
+  content: "\e909";
+  color: #fff;
+}
+.icon-address:before {
+  content: "\e90a";
+  color: #fff;
+}
+.icon-arrow-left:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-arrow-right:before {
+  content: "\e90c";
+  color: #fff;
+}
+.icon-arrow-top:before {
+  content: "\e90d";
+  color: #a1d6f4;
+}
+.icon-arrow:before {
+  content: "\e90e";
+  color: #a1d6f4;
+}
+.icon-book:before {
+  content: "\e90f";
+  color: #fff;
+}
+.icon-download:before {
+  content: "\e910";
+  color: #fff;
+}
+.icon-fax:before {
+  content: "\e911";
+  color: #fff;
+}
+.icon-mail:before {
+  content: "\e912";
+  color: #fff;
+}
+.icon-phone:before {
+  content: "\e913";
+  color: #fff;
+}
+.icon-price:before {
+  content: "\e914";
+  color: #fff;
+}
+.icon-search:before {
+  content: "\e915";
+  color: #fff;
+}
+.icon-size:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-x:before {
+  content: "\e917";
+  color: #fff;
+}

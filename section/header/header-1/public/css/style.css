@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 body {
   color: #333333;
   background-size: 100%;
@@ -511,7 +510,7 @@ ul {
   position: absolute;
   content: "";
   width: 1px;
-  background-color: #9E6023;
+  background-color: #9e6023;
   top: calc(100% + 12px);
   left: 50%;
   -webkit-transition: 0.3s;
@@ -520,7 +519,7 @@ ul {
 }
 
 .header__nav ul a.active, .header__nav ul a:hover {
-  color: #9E6023;
+  color: #9e6023;
 }
 
 .header__nav ul a.active::after, .header__nav ul a:hover::after {
@@ -529,7 +528,7 @@ ul {
 
 .header__btn {
   padding: 8px 45px;
-  background-color: #CA9969;
+  background-color: #ca9969;
   color: #fff;
   font-size: 16px;
   font-family: "noto serif TC";
@@ -537,7 +536,7 @@ ul {
 }
 
 .header__btn:hover {
-  background-color: #9E6023;
+  background-color: #9e6023;
   color: #fff;
 }
 
@@ -562,7 +561,7 @@ ul {
   position: absolute;
   width: 95%;
   height: 1px;
-  background-color: #9E6023;
+  background-color: #9e6023;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   left: 50%;

@@ -1,0 +1,41 @@
+.pic-text {
+  padding: 120px 20px;
+  text-align: center;
+  &-title {
+    font-size: 44px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    position: relative;
+    margin-bottom: 32px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 4px;
+      background-color: $secondary-500;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &-pic {
+    max-width: 1000px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  &-text {
+    margin-bottom: 80px;
+    color: $primary-100;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 991px) {
+    &-title {
+      font-size: 32px;
+    }
+    &-text {
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+  }
+}

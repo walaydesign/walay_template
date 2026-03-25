@@ -1,0 +1,93 @@
+.text-iconCards {
+  padding: 120px 0;
+  .row {
+    margin-left: -40px;
+    margin-right: -40px;
+    > div {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  &__title {
+    font-size: 44px;
+    font-weight: 700;
+    padding-bottom: 24px;
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 50px;
+      height: 4px;
+      background-color: $secondary-500;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__description {
+    font-size: 20px;
+    color: $primary-100;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 60px 0;
+    &__title {
+      font-size: 36px;
+    }
+    &__description {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.card-icon {
+  padding: 32px;
+  background-color: $primary-800;
+  border: 1px solid $primary-700;
+  position: relative;
+  overflow: hidden;
+  margin: 24px 0;
+  &-icon {
+    position: absolute;
+    font-size: 114px;
+    top: 14px;
+    left: -11px;
+    &::before {
+      color: $primary-600;
+    }
+  }
+  &-text {
+    padding-left: 100px;
+    &__title {
+      color: $secondary-500;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    &__desc {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 24px;
+    margin: 20px 0;
+    &-icon {
+      font-size: 80px;
+    }
+    &-text {
+      padding-left: 70px;
+      &__title {
+        font-size: 18px;
+      }
+      &__desc {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>title</title>
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <meta property="og:image" content="./public/img/share.jpg" />
+    <meta property="og:url" content="./public/img/share.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./public/css/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/icomoon/style.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="slider-card">
+        <div class="container">
+          <h2 class="title">卓越的視覺化管理</h2>
+          <div class="slider-card-wrapper">
+            <div class="swiper-container slider-card-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider-card-item">
+                    <img src="./public/img/slider-pic-1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider-card-item">
+                    <img src="./public/img/slider-pic-2.png" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-card-inner">
+              <div class="card">
+                <span class="icon-desktop card-icon"></span>
+                <div class="card-text">
+                  <h3 class="card-title">直觀的監控介面</h3>
+                  <p class="card-desc">
+                    GPG Viewer 提供頂尖的圖形化用戶界面，全面支援向量圖形，提供高達 1600x1200 分辨率的超清晰視圖，並具備靈活的縮放與平移功能。
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <span class="icon-lock card-icon"></span>
+                <div class="card-text">
+                  <h3 class="card-title">實時互鎖視覺化</h3>
+                  <p class="card-desc">
+                    系統能自動生成互鎖狀態的圖形表示並實時動態刷新，操作員能一目了然地精確掌握全變電站狀況，顯著提升整體操作安全性。
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <span class="icon-chart card-icon"></span>
+                <div class="card-text">
+                  <h3 class="card-title">動態趨勢與跨平台</h3>
+                  <p class="card-desc">
+                    將實時測量與歷史波形完美結合分析，並支援報表導出。內建 Web 伺服器與雲端連線，可隨時透過任何裝置的瀏覽器實時監控
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./public/js/jquery/jquery.min.js"></script>
+    <script src="./public/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./public/js/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".slider-card-swiper", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        effect: "fade",
+        speed: 1000,
+        fadeEffect: {
+          crossFade: true,
+        },
+        allowTouchMove: false,
+      })
+    </script>
+  </body>
+</html>

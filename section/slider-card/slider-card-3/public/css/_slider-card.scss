@@ -1,0 +1,10 @@
+.slider-card {
+  .container {
+    position: relative;
+  }
+  @media screen and (max-width: 991px) {
+    .container {
+      padding: 0;
+    }
+  }
+}
