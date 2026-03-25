@@ -1,10 +1,76 @@
 .slider-card {
+  padding: 120px 0;
+  background-color: $primary-800;
   .container {
     position: relative;
   }
+  &-wrapper {
+    position: relative;
+  }
+  &-swiper {
+    width: 58%;
+    position: absolute;
+    box-shadow: $shadow-pic;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+  &-inner {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
   @media screen and (max-width: 991px) {
-    .container {
-      padding: 0;
+    &-swiper {
+      width: 100%;
+      position: static;
+      transform: none;
+      margin-bottom: 40px;
+    }
+    &-inner {
+      width: 100%;
+      // padding: 20px;
+    }
+  }
+}
+
+.card {
+  padding: 24px 100px 24px 24px;
+  border: 1px solid $white-30;
+  display: flex !important;
+  flex-direction: row;
+  background-color: transparent;
+  border-radius: 0;
+  gap: 20px;
+  &-icon {
+    font-size: 40px;
+    &::before {
+      color: $primary-500;
+    }
+  }
+  &-text {
+    width: calc(100% - 40px - 20px);
+  }
+  &-title {
+    font: $heading-4;
+    margin-bottom: 12px;
+  }
+  &-desc {
+    font: $body-3;
+    color: $primary-100;
+    margin: 0;
+  }
+  @media screen and (max-width: 991px) {
+    padding: 16px;
+    gap: 16px;
+    &-title {
+      font: $heading-5;
+      margin-bottom: 8px;
+    }
+    &-desc {
+      font: $body-4;
     }
   }
 }
